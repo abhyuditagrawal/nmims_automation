@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Control Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #9c0202;
+            text-align: center;
+        }
+        .device-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        .logout-btn {
+            display: block;
+            width: 100px;
+            text-align: center;
+            margin: 20px auto;
+            padding: 10px;
+            background: #9c0202;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Device Control Panel</h1>
+        <p>Logged in as: <?php echo htmlspecialchars($_SESSION['fullname']); ?></p>
+        
+        <div class="device-card">
+            <h3>Smart Lights</h3>
+            <button class="device-btn">Turn On</button>
+            <button class="device-btn">Turn Off</button>
+        </div>
+        
+        <div class="device-card">
+            <h3>Air Conditioning</h3>
+            <button class="device-btn">Turn On</button>
+            <button class="device-btn">Turn Off</button>
+        </div>
+        
+        <a href="logout.php" class="logout-btn">Logout</a>
+    </div>
+</body>
+</html>

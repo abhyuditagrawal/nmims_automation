@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="NMIMS Smart College Automation System">
+    <meta name="author" content="NMIMS College">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>NMIMS Smart College Automation - Register</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <style>
+        /* Custom Styles for Register Page */
+        .register-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .register-form {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .register-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #2a2a2a;
+        }
+
+        .register-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .register-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #9c0202;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .register-form button:hover {
+            background-color: #e6911a;
+        }
+
+        .register-form p {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .register-form a {
+            color: #9c0202;
+            text-decoration: none;
+        }
+
+        .register-form a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+  <!-- Sub Header -->
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-8">
+          <div class="left-content">
+            <p>Welcome to NMIMS Smart College Automation System</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-4">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="index.html" class="logo">
+                          NMIMS Automation
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                          <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
+                          <li><a href="index.html#features">Features</a></li>
+                          <li><a href="index.html#devices">Devices</a></li>
+                          <li><a href="index.html#about">About</a></li>
+                          <li><a href="index.html#contact">Contact</a></li>
+                          <li><a href="login.html" class="login-trigger">Login</a></li>
+                      </ul>        
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="section main-banner" id="top" data-section="section1">
+      <video autoplay muted loop id="bg-video">
+          <source src="assets/videos/nmims.mp4" type="video/mp4" />
+      </video>
+
+      <div class="video-overlay header-text">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="register-section">
+                  <div class="register-form">
+                    <h2>Register as a Teacher</h2>
+                    <form id="register" action="register.php" method="post" onsubmit="return validateForm()">
+                      <input type="text" name="fullname" id="fullname" placeholder="Full Name" required>
+                      <input type="email" name="email" id="email" placeholder="Email Address" required>
+                      <input type="number" name="sap_id" id="sapId" placeholder="SAP ID" required>
+                      <input type="password" name="password" id="password" placeholder="Password" required>
+                      <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" required>
+                      <input type="text" name="department" id="department" placeholder="Department" required>
+                      
+                      <button type="submit">Register</button>
+                    </form>
+                    <p>Already have an account? <a href="login.html">Login here</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+        function validateForm() {
+            const fullname = document.getElementById('fullname').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const sapId = document.getElementById('sapId').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const confirmPassword = document.getElementById('confirm-password').value.trim();
+            const department = document.getElementById('department').value.trim();
+
+            // Validate Full Name
+            if (fullname === "") {
+                alert("Full Name is required.");
+                return false;
+            }
+
+            // Validate Email
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Validate SAP ID
+            if (sapId === "" || isNaN(sapId)) {
+                alert("Please enter a valid SAP ID.");
+                return false;
+            }
+
+            // Validate Password
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters long.");
+                return false;
+            }
+
+            // Validate Confirm Password
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            // Validate Department
+            if (department === "") {
+                alert("Department is required.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>
